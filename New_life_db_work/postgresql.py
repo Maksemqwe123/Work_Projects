@@ -24,17 +24,6 @@ class DataBase:
                  VALUES (%s, %s, %s, %s, %s, %s)""",
                 (ticket, price_open, price_high, price_low, price_close, price_date))
 
-    def update_query(self, price_open, price_high, price_low, price_close, price_date):
-        with self.connection:
-            return self.cursor.execute(
-                """update price_history set price_open = %s, 
-                price_high = %s, 
-                price_low = %s, 
-                price_close = %s, 
-                price_date = %s""",
-                (price_open, price_high, price_low, price_close, price_date)
-            )
-
     def select_query(self):
         with self.connection:
             return self.cursor.execute(
