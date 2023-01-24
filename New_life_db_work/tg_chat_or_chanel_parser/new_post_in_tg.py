@@ -15,12 +15,12 @@ async def normal_handler(event):
     if isinstance(event.chat, types.Channel):
         username = event.chat.username
         add_chat_name = '@' + str(username)
-        print('всё ок')
+        print('РІСЃС‘ РѕРє')
 
         with open("chat.csv", "w") as f:
             writer = csv.writer(f)
             writer.writerow(add_chat_name)
-            print('запись готова')
+            print('Р·Р°РїРёСЃСЊ РіРѕС‚РѕРІР°')
         await client.send_message("https://t.me/Makcemjoi", event.message)
 
 if __name__ == '__main__':
